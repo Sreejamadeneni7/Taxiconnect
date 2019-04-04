@@ -2,90 +2,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-form h1 {
-color: white;
-text-align: center;
-}
-form {
-font-size: 22px;
-color: white;
-}
-input {
-display: block;
-clear: both;
-}
-fieldset {
-margin: 1em 180;
-background-color:white;
-}
-label input {
-display: block;
-color: red;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 body {
-background: white;
+  font-family: 'Lato', sans-serif;
 }
- <style>
-            body {
-              font-family: "Lato", sans-serif;
-            }
 
-            .sidenav {
-              height: 100%;
-              width: 280px;
-              position: fixed;
-              z-index: 1;
-              top: 0;
-              left: 0;
-              background-color: #111;
-              overflow-x: hidden;
-              padding-top: 50px;              
-            }
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
 
-            .sidenav a {
-              padding: 6px 6px 6px 32px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-            }
-            span {
-                padding: 6px 6px 6px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-            }
-            .sidenav a:hover {
-              color: #f1f1f1;
-            }
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
 
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  
+  }
+  .logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}
+
+}
 </style>
 </head>
+<form align="right" name="form1" method="post" action="taxilogin.html">
+  <label class="logoutLblPos">
+  <input name="submit2" type="submit" id="submit2" value="log out">
+  </label>
+</form>
 <body>
-<div class="sidenav">
-            
-            <li>
-                <span>User Profile</span>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <li>
+                User Profile
                 <ul>
                   
-                    <a href="category.jsp">Add Info</a>
-                    <a href="category.jsp">Search Users</a>
-                    <a href="category.jsp">Account info</a>
+                    <a href="">Add Info</a>
+                    <a href="">Search Users</a>
+                    <a href="">Account info</a>
                 </ul>
-             </div>
-              
+  </div>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; click here</span>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>              
 <center><h1>TAXI CONNECT</h1>
- <h2>A NETWORK OF TAXI DRIVERS</h2>
- Select a file to upload: <br />
+ <h2>A NETWORK OF TAXI DRIVERS</h2></br></br></br></br></br>
+ Upload your profile picture: </br></br>
       <form action = "ProfileServlet" method = "post" enctype = "multipart/form-data">
          <input type = "file" name = "file" size = "50" />
-         <br />
          <input type = "submit" value = "Upload File" />
-<button type="ACCOUNT">ACCOUNT</button><br>
-<button type="LOGOUT">LOGOUT</button><br>
 </form>
+
 </center>
 </body>
 </html>
