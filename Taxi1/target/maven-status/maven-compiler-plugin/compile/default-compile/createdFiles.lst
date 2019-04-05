@@ -5,3 +5,4 @@ taxiconnect\LoginDao.class
 taxiconnect\Exceptionservlet.class
 taxiconnect\connection.class
 taxiconnect\ProfileServlet.class
+taxiconnect\Search.class
