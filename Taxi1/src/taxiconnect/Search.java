@@ -35,32 +35,33 @@ public class Search extends HttpServlet {
             System.out.println("Connected!");
             String pid = request.getParameter("pid");
  
-            ArrayList al = null;
-            ArrayList pid_list = new ArrayList();
-            String query = "select * from taxi where Lastname='" + pid + "' ";
+            ArrayList<String> al = new ArrayList<String>();
+            ArrayList<String> pid_list = new ArrayList<String>();
+            String query = "select * from taxi where Firstname='" + pid + "' ";
  
             System.out.println("query " + query);
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
- 
+            int i =0;
             while (rs.next()) {
-                al = new ArrayList();
+            
  
 //                out.println(rs.getString(1));
 //                out.println(rs.getString(2));
 //                out.println(rs.getString(3));
 //                out.println(rs.getString(4));
-//					out.println(rs.getString(5));                
-                al.add(rs.getString(1));
-                al.add(rs.getString(2));
-                al.add(rs.getString(3));
-                al.add(rs.getString(4));
-                al.add(rs.getString(5));
+//					out.println(rs.getString(5)); 
+
+                	al.add(rs.getString(i));
+                	i++;
+                
+                
+              
  
                 System.out.println("al :: " + al);
-                pid_list.add(al);
+              
             }
- 
+            pid_list.addAll(al);
             request.setAttribute("piList", pid_list);
             RequestDispatcher view = request.getRequestDispatcher("/searchview.jsp");
             view.forward(request, response);

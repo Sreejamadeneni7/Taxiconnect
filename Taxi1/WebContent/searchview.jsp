@@ -4,6 +4,8 @@
     <head>
     </head>
     <body>
+    <%@page import="java.util.*"%>
+    
         <table width="700px" align="center"
                style="border:1px solid #000000;">
             <tr>
@@ -22,7 +24,7 @@
                 int count = 0;
                 String color = "#F9EBB3";
                 if (request.getAttribute("piList") != null) {
-                    ArrayList al = (ArrayList) request.getAttribute("piList");
+                    ArrayList<String> al = (ArrayList) request.getAttribute("piList");
                     System.out.println(al);
                     Iterator itr = al.iterator();
                     while (itr.hasNext()) {
@@ -31,13 +33,11 @@
                             color = "#eeffee";
                         }
                         count++;
-                        ArrayList pList = (ArrayList) itr.next();
+                        ArrayList<String> pList = (ArrayList) itr.next();
             %>
             <tr style="background-color:<%=color%>;">
-                <td><%=pList.get(0)%></td>
                 <td><%=pList.get(1)%></td>
-                <td><%=pList.get(2)%></td>
-                <td><%=pList.get(3)%></td>
+              
             </tr>
             <%
                     }
