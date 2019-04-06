@@ -39,22 +39,25 @@ public class Search extends HttpServlet {
             ArrayList<String> pid_list = new ArrayList<String>();
             String query = "select * from taxi where Firstname='" + pid + "' ";
  
-            System.out.println("query " + query);
+            System.out.println("query  " + query);
             st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
-            int i =0;
             while (rs.next()) {
-            
- 
-//                out.println(rs.getString(1));
-//                out.println(rs.getString(2));
-//                out.println(rs.getString(3));
-//                out.println(rs.getString(4));
+                
+            	 
+//              out.println(rs.getString(1));
+//              out.println(rs.getString(2));
+//              out.println(rs.getString(3));
+//              out.println(rs.getString(4));
 //					out.println(rs.getString(5)); 
 
-                	al.add(rs.getString(i));
-                	i++;
-                
+              	al.add(rs.getString(1));
+              	al.add(rs.getString(2));
+              	al.add(rs.getString(3));
+              	al.add(rs.getString(4));
+              	al.add(rs.getString(5));  
+              	al.add(rs.getString(6)); 
+              	al.add(rs.getString(7)); 
                 
               
  

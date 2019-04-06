@@ -17,6 +17,8 @@
                 <td><b>Firstname</b></td>
                 <td><b>Lastname</b></td>
                 <td><b>Email</b></td>
+                <td><b>Password</b></td>
+                <td><b>AGE</b></td>
                 <td><b>Gender</b></td>
 				<td><b>Car Model</b></td>
             </tr>
@@ -37,6 +39,12 @@
             %>
             <tr style="background-color:<%=color%>;">
                 <td><%=pList.get(1)%></td>
+                <td><%=pList.get(2)%></td>
+                <td><%=pList.get(3)%></td>
+                <td><%=pList.get(4)%></td>
+                <td><%=pList.get(5)%></td>
+                <td><%=pList.get(6)%></td>
+                <td><%=pList.get(7)%></td>
               
             </tr>
             <%
