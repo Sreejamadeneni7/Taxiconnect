@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title>
+<style>
+body {
+  background-image: url("indeximage.jpg");
+  background-repeat: no-repeat;
+   background-position:center;
+  background-attachment: fixed;
+};
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center-right;
+}
+
+.container .btn:hover {
+  background-color: red;
+}
+</style>
 </head>
 <body>
 <h1 align="center"> WELCOME TO TAXI CONNECT</h1>
 <form method="post" action="taxilogin.html">
-<div align="center"><br><br><br><br>
-    <button type="submit">LOGIN</button>
- </div>
+<div class="container">
+
+  <button class="btn">LOGIN</button>
+</div>
 </form>
 </body>
 </html>
