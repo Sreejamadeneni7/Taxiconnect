@@ -35,8 +35,8 @@ public class Search extends HttpServlet {
             System.out.println("Connected!");
             String pid = request.getParameter("pid");
  
-            ArrayList<String> al = new ArrayList<String>();
-            ArrayList<String> pid_list = new ArrayList<String>();
+            ArrayList al = new ArrayList();
+            ArrayList pid_list = new ArrayList();
             String query = "select * from taxi where Firstname='" + pid + "' ";
  
             System.out.println("query  " + query);

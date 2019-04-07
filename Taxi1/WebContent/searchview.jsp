@@ -25,8 +25,9 @@
             <%
                 int count = 0;
                 String color = "#F9EBB3";
+                ArrayList pList ;
                 if (request.getAttribute("piList") != null) {
-                    ArrayList<String> al = (ArrayList) request.getAttribute("piList");
+                    ArrayList al = (ArrayList) request.getAttribute("piList");
                     System.out.println(al);
                     Iterator itr = al.iterator();
                     while (itr.hasNext()) {
@@ -35,7 +36,8 @@
                             color = "#eeffee";
                         }
                         count++;
-                        ArrayList<String> pList = (ArrayList) itr.next();
+                       pList = (ArrayList) itr.next();
+                      
             %>
             <tr style="background-color:<%=color%>;">
                 <td><%=pList.get(1)%></td>
