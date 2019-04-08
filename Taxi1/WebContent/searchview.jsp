@@ -14,8 +14,8 @@
                     <b>User Record</b></td>
             </tr>
             <tr style="background-color:lightgrey;">
-                <td><b>Firstname</b></td>
-                <td><b>Lastname</b></td>
+                <td><b>FirstName</b></td>
+                <td><b>LastName</b></td>
                 <td><b>Email</b></td>
                 <td><b>Password</b></td>
                 <td><b>AGE</b></td>
@@ -25,9 +25,9 @@
             <%
                 int count = 0;
                 String color = "#F9EBB3";
-                ArrayList pList ;
+                ArrayList<String> pList ;
                 if (request.getAttribute("piList") != null) {
-                    ArrayList al = (ArrayList) request.getAttribute("piList");
+                    ArrayList<String> al = (ArrayList) request.getAttribute("piList");
                     System.out.println(al);
                     Iterator itr = al.iterator();
                     while (itr.hasNext()) {
@@ -36,7 +36,7 @@
                             color = "#eeffee";
                         }
                         count++;
-                       pList = (ArrayList) itr.next();
+                      pList = (ArrayList) itr.next();
                       
             %>
             <tr style="background-color:<%=color%>;">

@@ -35,8 +35,8 @@ public class Search extends HttpServlet {
             System.out.println("Connected!");
             String pid = request.getParameter("pid");
  
-            ArrayList al = new ArrayList();
-            ArrayList pid_list = new ArrayList();
+            ArrayList<String> al = new ArrayList<String>();
+            ArrayList<String> pid_list = new ArrayList<String>();
             String query = "select * from taxi where Firstname='" + pid + "' ";
  
             System.out.println("query  " + query);
@@ -51,14 +51,13 @@ public class Search extends HttpServlet {
 //              out.println(rs.getString(4));
 //					out.println(rs.getString(5)); 
 
-              	al.add(rs.getString(1));
+             	al.add(rs.getString(1));
               	al.add(rs.getString(2));
               	al.add(rs.getString(3));
               	al.add(rs.getString(4));
               	al.add(rs.getString(5));  
               	al.add(rs.getString(6)); 
               	al.add(rs.getString(7)); 
-                
               
  
                 System.out.println("al :: " + al);
