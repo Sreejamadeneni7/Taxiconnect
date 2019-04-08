@@ -20,14 +20,14 @@
                 <td><b>Password</b></td>
                 <td><b>AGE</b></td>
                 <td><b>Gender</b></td>
-				<td><b>Car Model</b></td>
+				<td><b>CarModel</b></td>
             </tr>
             <%
                 int count = 0;
                 String color = "#F9EBB3";
-                ArrayList<String> pList ;
+                
                 if (request.getAttribute("piList") != null) {
-                    ArrayList<String> al = (ArrayList) request.getAttribute("piList");
+                    ArrayList al = (ArrayList)request.getAttribute("piList");
                     System.out.println(al);
                     Iterator itr = al.iterator();
                     while (itr.hasNext()) {
@@ -36,17 +36,17 @@
                             color = "#eeffee";
                         }
                         count++;
-                      pList = (ArrayList) itr.next();
+                      ArrayList piList = (ArrayList)itr.next();
                       
             %>
             <tr style="background-color:<%=color%>;">
-                <td><%=pList.get(1)%></td>
-                <td><%=pList.get(2)%></td>
-                <td><%=pList.get(3)%></td>
-                <td><%=pList.get(4)%></td>
-                <td><%=pList.get(5)%></td>
-                <td><%=pList.get(6)%></td>
-                <td><%=pList.get(7)%></td>
+                <td><%=piList.get(1)%></td>
+                <td><%=piList.get(2)%></td>
+                <td><%=piList.get(3)%></td>
+                <td><%=piList.get(4)%></td>
+                <td><%=piList.get(5)%></td>
+                <td><%=piList.get(6)%></td>
+                <td><%=piList.get(7)%></td>
               
             </tr>
             <%
