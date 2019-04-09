@@ -36,17 +36,17 @@
                             color = "#eeffee";
                         }
                         count++;
-                      ArrayList piList = (ArrayList)itr.next();
+                      ArrayList pList = (ArrayList)itr.next();
                       
             %>
             <tr style="background-color:<%=color%>;">
-                <td><%=piList.get(1)%></td>
-                <td><%=piList.get(2)%></td>
-                <td><%=piList.get(3)%></td>
-                <td><%=piList.get(4)%></td>
-                <td><%=piList.get(5)%></td>
-                <td><%=piList.get(6)%></td>
-                <td><%=piList.get(7)%></td>
+                <td><%=pList.get(1)%></td>
+                <td><%=pList.get(2)%></td>
+                <td><%=pList.get(3)%></td>
+                <td><%=pList.get(4)%></td>
+                <td><%=pList.get(5)%></td>
+                <td><%=pList.get(6)%></td>
+                <td><%=pList.get(7)%></td>
               
             </tr>
             <%
